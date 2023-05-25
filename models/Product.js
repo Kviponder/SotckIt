@@ -27,20 +27,20 @@ Product.init(
       },
     },
     stock: {
-      type: DataTypes.INTEGER, 
+      type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 10,     //The stock column will be an integer with a default value of 10 and below is the validation
+      defaultValue: 10, //The stock column will be an integer with a default value of 10 and below is the validation
       validate: {
         isNumeric: true,
-      }
-  },
+      },
+    },
     category_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "category",   //The category model is imported at the top of the file from category.js
+        model: "category", //The category model is imported at the top of the file from category.js
         key: "id",
       },
-    }
+    },
   },
   {
     sequelize,
