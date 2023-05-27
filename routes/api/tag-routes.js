@@ -49,7 +49,8 @@ router.put("/:id", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  EventTarget.Destroy({
+  Tag.destroy({
+    //destroy is a Sequelize method for deleting an instance based on the model we're working with and the object we send in as an argument
     where: {
       id: req.params.id,
     },
